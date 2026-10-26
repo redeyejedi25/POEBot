@@ -1,0 +1,80 @@
+================================================================================
+PATH OF EXILE 2 - KNOWLEDGE CACHE: WEB SOURCES & REPOSITORIES
+================================================================================
+This file tracks authoritative web links, databases, and resources for Path of Exile 2.
+These sources serve as the raw input for our scraper and RAG retrieval pipeline.
+
+--------------------------------------------------------------------------------
+1. OFFICIAL PATH OF EXILE 2 SOURCES
+--------------------------------------------------------------------------------
+* Official Website:
+  https://pathofexile2.com
+  - Purpose: Official news, class announcements, early access announcements, league info.
+
+* Grinding Gear Games Official Forum (PoE 2 Section / Patch Notes):
+  https://www.pathofexile.com/forum
+  - Purpose: Official patch notes, developer balance manifests, hotfix logs.
+
+* GGG YouTube Channel (Developer Deep Dives & Interviews):
+  https://www.youtube.com/@pathofexile
+  - Purpose: Jonathan Rogers / Mark Roberts mechanics walkthroughs (boss design, skill systems, weapon swaps).
+
+
+--------------------------------------------------------------------------------
+2. PRIMARY DATABASES & WIKIS (STRUCTURED DATA & STATS)
+--------------------------------------------------------------------------------
+* PoE 2 Database (PoE2DB):
+  https://poe2db.tw
+  https://poe2db.tw/Version_1.0.0 (Official Version 1.0.0 Release Tracking)
+  - Purpose: The definitive datamined game database. Contains base item types, affixes, 
+    mod tiers, gem stat scalings, rune descriptions, boss stats, patch notes, and Version 1.0.0 rollout details.
+  - Recommended for: Scraping item stats, affix tables, gem level progression, and version release changes.
+
+* Official Community PoE 2 Wiki (poe2wiki / poewiki):
+  https://www.poewiki.net/wiki/Path_of_Exile_2
+  https://poe2wiki.net
+  - Purpose: Comprehensive community-maintained documentation of mechanics, lore, 
+    boss strategies, quests, and historical changes.
+  - Recommended for: Explanatory text, vendor recipes, quest walkthroughs.
+
+
+--------------------------------------------------------------------------------
+3. BUILD GUIDES, THEORYCRAFTING & GEM PLANNERS
+--------------------------------------------------------------------------------
+* PoE2Skills Gem & Skill Planner:
+  https://poe2skills.com/skill
+  - Purpose: Dedicated interactive planner for PoE 2 active skills, support gems, 
+    and skill tags. Essential for checking tag compatibility (Attack, Spell, Minion, 
+    Projectile, Melee, AoE, Ammunition, etc.) and valid support combinations.
+
+* Maxroll Path of Exile 2 Hub:
+  https://maxroll.gg/poe2
+  - Purpose: In-depth leveling guides, league starter builds, boss tactic cheat-sheets, 
+    crafting tutorials, and endgame progression milestones.
+
+* Mobalytics PoE 2 Hub:
+  https://mobalytics.gg/poe2
+  - Purpose: Build tier lists, build planner imports, passive skill tree routes.
+
+
+--------------------------------------------------------------------------------
+4. TRADE & ECONOMY APIS (FOR FUTURE EXTENSIONS)
+--------------------------------------------------------------------------------
+* Official Path of Exile 2 Trade:
+  https://www.pathofexile.com/trade2 (or official trade subroute)
+  - Purpose: Real-time item pricing, currency exchange rates, trade searches.
+
+* PoE Ninja / PoE Watch (Economy Trackers):
+  https://poe.ninja
+  - Purpose: Historical currency ratios, high-value unique prices, top player build snapshots.
+
+
+--------------------------------------------------------------------------------
+5. COMMUNITY DISCUSSION & DISCOVERIES
+--------------------------------------------------------------------------------
+* Reddit /r/pathofexile & /r/poe2:
+  https://www.reddit.com/r/pathofexile/
+  https://www.reddit.com/r/poe2/
+  - Purpose: Rapid discovery of hidden mechanics, bug reports, and community testing 
+    (e.g., how specific support gems interact).
+================================================================================

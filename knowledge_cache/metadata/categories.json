@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "id": "mechanics",
+      "name": "Core Mechanics",
+      "subcategories": [
+        "spirit_system",
+        "dodge_roll",
+        "weapon_swapping",
+        "defenses_armour_evasion_es",
+        "resistances_ailments",
+        "stumble_and_freeze",
+        "tag_system_and_scaling"
+      ],
+      "description": "Fundamental rules, engine changes, and universal mechanics in Path of Exile 2."
+    },
+    {
+      "id": "classes",
+      "name": "Classes & Ascendancies",
+      "subcategories": [
+        "warrior",
+        "ranger",
+        "sorceress",
+        "monk",
+        "mercenary",
+        "witch",
+        "druid",
+        "huntress",
+        "passive_tree",
+        "ascendancy_nodes"
+      ],
+      "description": "Character classes, ascendancy specializations, and passive skill tree routing."
+    },
+    {
+      "id": "gems",
+      "name": "Skill & Support Gems",
+      "subcategories": [
+        "gem_cutting",
+        "active_skills",
+        "support_gems",
+        "meta_gems",
+        "spirit_reservation_gems",
+        "skill_tags_and_compatibility"
+      ],
+      "description": "Skill gem mechanics, support socket rules, and skill leveling progression."
+    },
+    {
+      "id": "items_crafting",
+      "name": "Items & Crafting",
+      "subcategories": [
+        "base_types",
+        "affixes_prefixes_suffixes",
+        "runes_and_socketables",
+        "currency_items",
+        "gold_and_gambling",
+        "vendor_recipes"
+      ],
+      "description": "Equipment, rune sockets, currency usage, and crafting methods."
+    },
+    {
+      "id": "bosses_acts",
+      "name": "Bosses & Campaign",
+      "subcategories": [
+        "act_1",
+        "act_2",
+        "act_3",
+        "act_4",
+        "act_5",
+        "act_6",
+        "boss_telegraphs",
+        "quest_rewards"
+      ],
+      "description": "Campaign walkthroughs, boss damage types, mechanics, and survival tips."
+    },
+    {
+      "id": "endgame",
+      "name": "Endgame & Mapping",
+      "subcategories": [
+        "waystones",
+        "atlas_mechanics",
+        "pinnacle_bosses",
+        "league_content"
+      ],
+      "description": "Endgame map progression, waystone crafting, and pinnacle encounters."
+    }
+  ]
+}

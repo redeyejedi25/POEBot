@@ -1,0 +1,102 @@
+================================================================================
+PATH OF EXILE 2 - LOCAL AI ASSISTANT SPECIFICATION
+OPTION 2: DEEP KNOWLEDGE RAG & BUILD THEORYCRAFTER (DESKTOP / WEB APP)
+================================================================================
+
+1. OVERVIEW & VISION
+--------------------------------------------------------------------------------
+Path of Exile 2 is an intensely complex ARPG with deep mechanics, frequent patch 
+changes, unique gem systems, new weapon mechanics, and boss attack patterns. 
+Standard local LLMs suffer from knowledge cutoffs and hallucinations when asked 
+about specific mechanics, base types, or mod tiers.
+
+Option 2 solves this by building a dedicated, fully offline-capable desktop/web 
+application powered by Retrieval-Augmented Generation (RAG). By grounding a local 
+LLM with an indexed knowledge base of PoE 2 wikis, patch notes, ascendancy classes, 
+and skill gem tables, the assistant provides 100% accurate, factual, and tactical 
+answers.
+
+
+2. CORE CAPABILITIES
+--------------------------------------------------------------------------------
+* Factual Mechanic Lookups:
+  Accurately explain brand-new PoE 2 systems (e.g., Spirit resource, weapon swapping 
+  skills, dedicated dodge roll frames, skill-gem socketing rules).
+
+* Build Theorycrafting & Progression:
+  Provide tailored leveling progression, milestone recommendations, skill gem 
+  synergies, and passive node priorities based on your chosen class and playstyle.
+
+* Crafting & Currency Guidance:
+  Step-by-step instructions on crafting prefixes, suffixes, utilizing runes, and 
+  evaluating whether an item base is worth modifying.
+
+* Boss & Campaign Tactics:
+  Detailed boss fight cheat-sheets (damage types dealt, phase transitions, telegraph 
+  cues, and required resistances) for campaign and endgame maps.
+
+* Zero-Hallucination Citations:
+  Every response references the source document or wiki page stored in your local 
+  knowledge index so you can verify the mechanics.
+
+
+3. RECOMMENDED TECHNICAL ARCHITECTURE
+--------------------------------------------------------------------------------
+* Local LLM Engine:
+  - Runner: Ollama or llama.cpp
+  - Recommended Models: Qwen 2.5 (7B or 14B), Llama 3.1 (8B-Instruct), or Mistral 7B
+  - Quantization: Q4_K_M or Q5_K_M (fits comfortably in 8GB - 16GB VRAM)
+
+* Vector Database & Embeddings (Local):
+  - Vector Store: ChromaDB or LanceDB (fast, file-based, zero-server setup)
+  - Embedding Model: BAAI/bge-small-en-v1.5 or all-MiniLM-L6-v2 (runs efficiently on CPU or GPU)
+
+* Backend Framework:
+  - Language: Python 3.11+
+  - Orchestration: LangChain or LlamaIndex
+  - API Layer: FastAPI (if decoupled) or native framework integration
+
+* User Interface:
+  - Option A (Quickest to Build): Streamlit or Chainlit (modern chat UI with document browsing)
+  - Option B (Polished Desktop): Tauri (Rust + React/Tailwind) or Electron app wrapping local API
+
+* Data Ingestion & Knowledge Base Pipeline:
+  - Scrapers / Parsers: Markdown and JSON extractors for PoE 2 Wiki (poewiki.net), 
+    poe2db exports, patch notes, and curated build guides.
+  - Chunking Strategy: Markdown header-based chunking with metadata tagging 
+    (tags: [category: boss], [category: gem], [category: craft]).
+
+
+4. IMPLEMENTATION ROADMAP
+--------------------------------------------------------------------------------
+* Phase 1: Environment & Knowledge Ingestion
+  - Set up Python virtual environment and local Ollama instance.
+  - Ingest core PoE 2 game data (mechanics, gems, classes, bosses) into ChromaDB/LanceDB.
+
+* Phase 2: RAG Pipeline & Custom Prompting
+  - Implement vector similarity search with hybrid keyword matching (BM25 + vector).
+  - Design system prompts specialized for Path of Exile theorycrafting (concise, 
+    data-driven, formatted with bullet points).
+
+* Phase 3: Desktop / Web User Interface
+  - Build chat interface with dark mode and Path of Exile styling.
+  - Add source preview cards, history retention, and quick-prompt buttons 
+    (e.g., "Boss Strategy", "Gem Synergy", "Crafting Advice").
+
+* Phase 4: Advanced Features & Integrations
+  - Character profile pasting / build import.
+  - Optional online hook for live trade API / economy checks.
+
+
+5. SYSTEM REQUIREMENTS
+--------------------------------------------------------------------------------
+* Minimum:
+  - OS: Windows 10/11 64-bit
+  - RAM: 16 GB System Memory
+  - Storage: 10 GB free space (for models + vector store)
+  - GPU: NVIDIA GPU with 6 GB+ VRAM (e.g., RTX 2060 / 3060) or modern multi-core CPU
+
+* Recommended:
+  - RAM: 32 GB System Memory
+  - GPU: NVIDIA GPU with 8 GB - 12 GB+ VRAM (RTX 3070 / 4070 or better)
+================================================================================

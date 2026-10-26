@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Path of Exile 2 - Player Lexicon & Synonym Dictionary",
+  "description": "Isolated mapping dictionary used strictly for pre-retrieval query normalization. Kept separate from general LLM prompt context to keep core knowledge files pure.",
+  "mappings": [
+    {
+      "official_term": "Waystone",
+      "player_synonyms": [
+        "map",
+        "maps",
+        "mapping",
+        "map tier",
+        "map item",
+        "endgame map"
+      ],
+      "category": "endgame",
+      "notes": "Players universally use 'maps' and 'mapping' to describe running Waystones on the Atlas."
+    },
+    {
+      "official_term": "Augment Socket",
+      "player_synonyms": [
+        "rune socket",
+        "item socket",
+        "gear socket",
+        "equipment socket",
+        "weapon socket",
+        "armour socket"
+      ],
+      "category": "items_crafting",
+      "notes": "Equipment sockets used exclusively for Runes and Soul Cores (rolled via Artificer's Orbs). Distinct from skill gem sockets."
+    },
+    {
+      "official_term": "Augment",
+      "player_synonyms": [
+        "rune",
+        "runes",
+        "soul core",
+        "soul cores",
+        "socketables",
+        "enchants"
+      ],
+      "category": "items_crafting",
+      "notes": "The umbrella game term encompassing both basic Runes and rare endgame Soul Cores."
+    },
+    {
+      "official_term": "Artificer's Orb",
+      "player_synonyms": [
+        "socket orb",
+        "add socket currency",
+        "jeweller orb for gear",
+        "rune socket orb"
+      ],
+      "category": "items_crafting",
+      "notes": "Currency used to add Augment Sockets to weapons and armour (up to 2 for body armour/2H weapons; 1 for 1H/helm/gloves/boots)."
+    },
+    {
+      "official_term": "Uncut Gem",
+      "player_synonyms": [
+        "gem drop",
+        "blank gem",
+        "raw gem",
+        "skill gem drop",
+        "uncut skill",
+        "uncut support"
+      ],
+      "category": "gems",
+      "notes": "Loot item right-clicked to open the Gemcutting menu to carve any skill/support of that level tier."
+    },
+    {
+      "official_term": "Spirit",
+      "player_synonyms": [
+        "reservation",
+        "reservation pool",
+        "aura mana",
+        "aura reservation",
+        "minion pool"
+      ],
+      "category": "mechanics",
+      "notes": "Dedicated 100-base persistent resource pool. Completely separate from Mana."
+    },
+    {
+      "official_term": "Precursor Tablet",
+      "player_synonyms": [
+        "scarab",
+        "scarabs",
+        "sextants",
+        "map juice",
+        "tablet",
+        "breach tablet"
+      ],
+      "category": "endgame",
+      "notes": "Auxiliary items placed into the Map Device alongside Waystones to force league encounters."
+    },
+    {
+      "official_term": "Precursor Tower",
+      "player_synonyms": [
+        "tower",
+        "fog tower",
+        "beacon tower",
+        "reveal tower"
+      ],
+      "category": "endgame",
+      "notes": "Atlas landmark encounter that permanently clears the Fog of War and drops a Precursor Tablet."
+    },
+    {
+      "official_term": "Deflection",
+      "player_synonyms": [
+        "evasion buffer",
+        "glancing hit",
+        "mitigation roll",
+        "secondary evasion"
+      ],
+      "category": "mechanics",
+      "notes": "Rolls when an attack bypasses Evasion to mitigate a significant portion of incoming damage."
+    },
+    {
+      "official_term": "Gold",
+      "player_synonyms": [
+        "respec points",
+        "respec currency",
+        "regret orbs",
+        "vendor coins",
+        "gambling money"
+      ],
+      "category": "items_crafting",
+      "notes": "Non-tradable dropped currency used for vendor passive respecs, vendor mystery gambling, and trade market fees."
+    }
+  ]
+}
