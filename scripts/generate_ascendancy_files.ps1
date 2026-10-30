@@ -1,4 +1,4 @@
-$html = Get-Content "C:\Users\andis\OneDrive\Documents\Projects\POEbot\knowledge_cache\sources\poe2db_ascendancy_raw.html" -Raw
+$html = Get-Content "C:\Projects\POEbot\knowledge_cache\sources\poe2db_ascendancy_raw.html" -Raw
 
 $pattern = '(?s)<a class="PassiveSkills"[^>]*>([^<]+)</a></div><div class="property">Ascendancy:\s*<span[^>]*><a[^>]*>([^<]+)</a></span></div><div class="property">Character:\s*<span[^>]*><a[^>]*>([^<]+)</a></span></div><div class="separator"></div>(.*?)(?=</div></div></div></div>|<div class="col">|$)'
 
@@ -33,7 +33,16 @@ foreach ($m in $matches) {
     }
 }
 
-$outDir = "C:\Users\andis\OneDrive\Documents\Projects\POEbot\knowledge_cache\raw\classes\ascendancies"
+# Curated key facts (approved by Andi, POEbot project). These are injected at the TOP of the
+# generated ascendancy file so that GENERAL questions about the ascendancy always surface them.
+# Keep this map here so re-running this generator never wipes curated facts.
+$curatedKeyFacts = @{
+    'Disciple of Varashta' = @(
+        'The **djinns** that the **Disciple of Varashta** ascendancy can summon **only scale with skill tree nodes, skills, and skill gems that have the `minion` tag**. (Detail: `knowledge_cache/raw/classes/ascendancies/disciple_of_varashta_djinn_scaling.md`)'
+    )
+}
+
+$outDir = "C:\Projects\POEbot\knowledge_cache\raw\classes\ascendancies"
 if (-not (Test-Path $outDir)) {
     New-Item -ItemType Directory -Path $outDir -Force | Out-Null
 }
@@ -51,6 +60,16 @@ foreach ($asc in $grouped.Keys | Sort-Object) {
     [void]$sb.AppendLine("")
     [void]$sb.AppendLine("---")
     [void]$sb.AppendLine("")
+    if ($curatedKeyFacts.ContainsKey($asc)) {
+        [void]$sb.AppendLine("## Key Facts (ALWAYS INCLUDE in any answer about this ascendancy)")
+        [void]$sb.AppendLine("")
+        foreach ($fact in $curatedKeyFacts[$asc]) {
+            [void]$sb.AppendLine("* **KEY FACT:** $fact")
+        }
+        [void]$sb.AppendLine("")
+        [void]$sb.AppendLine("---")
+        [void]$sb.AppendLine("")
+    }
     [void]$sb.AppendLine("## Ascendancy Passive Skills & Keystones")
     [void]$sb.AppendLine("")
     
@@ -63,3 +82,4 @@ foreach ($asc in $grouped.Keys | Sort-Object) {
     Set-Content -Path $filePath -Value $sb.ToString() -Encoding UTF8
     Write-Output "Generated: $slug with $($grouped[$asc].Nodes.Count) nodes"
 }
+

@@ -136,6 +136,7 @@ Players can choose between two independent trial systems to earn their Ascendanc
   * *Now and Again:* 20% chance for cascading spells to echo and repeatable spells to repeat.
   * *Apex of the Moment:* Enemies in presence are passively slowed by 20%.
 * **Disciple of Varashta** (Djinn Barya & Energy Shield Defense)
+  * **KEY FACT (always include in any answer about this ascendancy):** The **djinns** that the **Disciple of Varashta** ascendancy can summon **only scale with skill tree nodes, skills, and skill gems that have the `minion` tag** (see `ascendancies/disciple_of_varashta.md` and `ascendancies/disciple_of_varashta_djinn_scaling.md`).
   * *Varashta's Intuition:* **100% of Elemental Damage is taken from Mana before Life**.
   * *Instruments of Power:* Allows equipping a Focus while wielding a two-handed Staff.
   * *Djinn Skills:* Summons elemental djinns (**Navira**, **Kelari**, **Ruzhan**) with unique sub-skills (Fracturing, Well, Oasis, Judgment, Trap, Fury).
