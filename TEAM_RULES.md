@@ -31,7 +31,7 @@ Local working tree: the project folder above (unless Andi names another path).
    - Create a branch from `main` with a clear name (e.g. `knowledgebase/readme.txt-update1234`).
    - Commit on that branch, push the branch, open a **PR**.
    - **PR author:** shared machine user **`poebot-bot`** (not @redeyejedi25). Bots push/open PRs as that account so Andi can Approve without self-approving.
-   - **PR title:** include `[Nickname]` of the raising bot (e.g. `[Specs] Disciple djinn scaling knowledge`). Apply the bot's `owner:*` label on the PR.
+   - **PR title:** use the **GitHub proper role name** in brackets — `[Support]`, `[Data Analyst]`, `[Backend]`, `[Frontend]`, `[QA]`, `[Project Manager]`, or `[POEbot Test]`. Example: `[Data Analyst] Disciple djinn scaling knowledge`. **Never** use chat nicknames in PR titles (`[Bridge]`, `[Specs]`, `[Core]`, `[Face]`, `[Proof]`, `[Oracle]`). Nicknames are chat-local only. Apply the bot's `owner:*` label on the PR.
    - Notify **Project Manager**, who tells Andi there is a PR to approve.
 9. **No changes without a PR Andi (@redeyejedi25) has approved and merged.** Andi Approves/merges as himself; he must not be the PR author.
 10. For each change, create an item on [GitHub Project #1](https://github.com/users/redeyejedi25/projects/1) with detail of the change and **evidence it works**.
@@ -55,7 +55,7 @@ Local working tree: the project folder above (unless Andi names another path).
 14. **GitHub work tracking (human-style):**
     - Parent board/repo items stay high-level (goal + acceptance). Do **not** dump all bot evidence only on the parent.
     - Each bot that works a parent item creates/updates their own **sub-issue** under it for their slice of work, with: what they did, evidence, blockers, and next step.
-    - **Sub-issue title convention:** `[owner] verb object` (example: `[Bridge] Add issue to project board`). Owner token matches the bot role name used in labels (e.g. Bridge, Specs, Core, Face, Proof).
+    - **Sub-issue title convention:** `[Proper GitHub role name] verb object` (example: `[Support] Add issue to project board`). Use the same proper names as PR titles (`Support`, `Data Analyst`, …) — not chat nicknames.
     - Apply the bot's `owner:*` label on their sub-issue (and on the parent while they are primary owner).
     - Keep **Status** current on parent and sub-issues. Project Status values: **Todo**, **In Progress**, **Blocked**, **Ready for Andi**, **Done**.
     - **Parent Status follows children:** if any child is In Progress or Blocked, parent is not Done; when all children are Done (and acceptance met), move parent to Done (or close). Prefer closing **Done** sub-issues when that slice is finished; leave the parent open until acceptance is met.
@@ -76,7 +76,9 @@ Local working tree: the project folder above (unless Andi names another path).
     - `type:chore` — rename, closeout, misc hygiene
     Epic grouping stays on **parent/sub-issues** (no `epic:*` labels). Default GitHub labels (bug, enhancement, …) remain available.
 
-16. **PR authorship (Andi Option A):** PRs are opened as GitHub user `poebot-bot` (shared machine user). Andi (@redeyejedi25) Approves and merges. PR titles use `[Nickname]`; PRs carry the raising bot's `owner:*` label. Do not open product PRs as @redeyejedi25.
+16. **PR authorship (Andi Option A):** PRs are opened as GitHub user `poebot-bot` (shared machine user). Andi (@redeyejedi25) Approves and merges. PR titles use **GitHub proper role names** only (see rule 8 / rule 18); PRs carry the raising bot's `owner:*` label. Do not open product PRs as @redeyejedi25.
 
 17. **Standing process vs board items:** Ongoing board hygiene (owner labels, Status, Priority/Area, Development/PR linking, type labels) is **standing process** defined in this file. Do **not** track routine hygiene as its own Project #1 work item. Project #1 holds goals/acceptance and real change work only. Bridge applies hygiene when Project Manager or Andi STARTS a concrete board action (add item, Status change, etc.), not via a perpetual hygiene ticket.
+
+18. **PR and issue titles (Andi):** GitHub titles use **proper role names** only: `[Support]`, `[Data Analyst]`, `[Backend]`, `[Frontend]`, `[QA]`, `[Project Manager]`, `[POEbot Test]`. Chat nicknames (Bridge, Specs, Core, Face, Proof, Oracle) stay in chat and must **not** appear in PR titles, issue titles meant for the board, or GitHub labels.
 
