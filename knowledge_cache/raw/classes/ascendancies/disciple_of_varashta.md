@@ -5,6 +5,12 @@
 
 ---
 
+## Key Facts (ALWAYS INCLUDE in any answer about this ascendancy)
+
+* **KEY FACT:** The **djinns** that the **Disciple of Varashta** ascendancy can summon **only scale with skill tree nodes, skills, and skill gems that have the `minion` tag**. (Detail: `knowledge_cache/raw/classes/ascendancies/disciple_of_varashta_djinn_scaling.md`)
+
+---
+
 ## Ascendancy Passive Skills & Keystones
 
 ### Sacred Rituals
